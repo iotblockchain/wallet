@@ -215,7 +215,7 @@ x_TXFee                     : 'TX Fee',
 x_TxHash                    : 'TX Hash',
 
 /* Check TX Status */
-NAV_CheckTxStatus           : 'Check TX Status',
+NAV_CheckTxStatus           : '查看交易状态',
 NAV_TxStatus                : 'TX Status',
 tx_Details                  : 'Transaction Details',
 tx_Summary                  : 'During times of high volume (like during ICOs) transactions can be pending for hours, if not days. This tool aims to give you the ability to find and "cancel" / replace these TXs. ** This is not typically something you can do. It should not be relied upon & will only work when the TX Pools are full. [Please, read about this tool here.](https://myetherwallet.github.io/knowledge-base/transactions/check-status-of-ethereum-transaction.html)**',
@@ -269,17 +269,17 @@ TXFEE_Desc                  : 'The TX Fee is paid to miners for including your T
 NAV_AddWallet               : '添加钱包 ',
 NAV_BulkGenerate            : '批量生成 ',
 NAV_Contact                 : '联系我们 ',
-NAV_Contracts               : '合同 ',
+NAV_Contracts               : '智能合约 ',
 NAV_DeployContract          : '部署合约 ',
 NAV_ENS                     : 'ENS',
-NAV_GenerateWallet_alt      : 'New Wallet ',
+NAV_GenerateWallet_alt      : '生成钱包 ',
 NAV_GenerateWallet          : '生成钱包 ',
 NAV_Help                    : '帮助 ',
-NAV_InteractContract        : 'Interact with Contract ',
+NAV_InteractContract        : '创建合约',
 NAV_Multisig                : 'Multisig ',
 NAV_MyWallets               : '我的钱包 ',
 NAV_Offline                 : '离线发送 ',
-NAV_SendEther               : '发送以太币 / 发送代币 ', //combined these tabs
+NAV_SendEther               : '发送 LDBC', //combined these tabs
 NAV_SendTokens              : 'Send Tokens ',
 NAV_SignMsg                 : 'Sign Message ',
 NAV_Swap                    : 'Swap ',
@@ -475,7 +475,7 @@ MYWAL_Content_2             : '确保在移除以前你已经保存了私钥和K
 MYWAL_Content_3             : '如果你想将来在MyEtherWallet插件中使用该钱包，你需要手动添加私钥/JSON文件和密码。 ',
 
 /* View Wallet Details */
-VIEWWALLET_Subtitle         : '这允许你下载不同格式的私钥和重新打印你的纸钱包。为了将[你的账户导入到Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)，你可能需要这个操作。如果你想查看你的余额，我们推荐使用区块浏览器，例如[etherscan.io](https://etherscan.io/)。 ',
+VIEWWALLET_Subtitle         : '这允许你下载不同格式的私钥和重新打印你的纸钱包。为了将[你的账户导入到Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)，你可能需要这个操作。如果你想查看你的余额，我们推荐使用区块浏览器，例如[e.ldbc.io](https://e.ldbc.io/)。 ',
 VIEWWALLET_Subtitle_Short   : '这允许你下载不同格式的私钥和重新打印你的纸钱包。 ',
 VIEWWALLET_SuccessMsg       : '成功！这是你的钱包细节！ ',
 VIEWWALLET_ShowPrivKey      : '(show)',

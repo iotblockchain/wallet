@@ -206,6 +206,7 @@ globalFuncs.getDefaultTokensAndNetworkType =  function getDefaultTokensAndNetwor
     var defaultNodes = require('./nodes').nodeList;
 
     var tokenMappings = {
+        'ldbc': require('./tokens/ldbcTokens.json'),
         'eth': require('./tokens/ethTokens.json'),
         'etc': require('./tokens/etcTokens.json'),
         'rop': require('./tokens/ropstenTokens.json'),
