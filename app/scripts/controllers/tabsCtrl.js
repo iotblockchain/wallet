@@ -6,7 +6,7 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     $scope.customNodeModal = document.getElementById('customNodeModal') ? new Modal(document.getElementById('customNodeModal')) : null;
     $scope.Validator = Validator;
     $scope.nodeList = nodes.nodeList;
-    $scope.defaultNodeKey = 'eth_mew';
+    $scope.defaultNodeKey = 'eth_ldbc';
     $scope.customNode = { options: 'eth', name: '', url: '', port: '', httpBasicAuth: null, eip155: false, chainId: '' };
     $scope.customNodeCount = 0;
     $scope.nodeIsConnected = true;
@@ -163,6 +163,9 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
             for (var i = 0; i < localNodes.length; i++) $scope.addCustomNodeToList(localNodes[i]);
         }
     }
+    // globalFuncs.localStorage.setItem('localNodes', '[{"options":"cus","name":"LDBC","url":"https://rpc.ldbc.io","port":"443","httpBasicAuth":null,"eip155":false,"chainId":""}]');
+    // globalFuncs.localStorage.setItem('curNode', '{"key":"cus_cus_0"}');
+
     $scope.getCustomNodesFromStorage();
     $scope.setCurNodeFromStorage();
 

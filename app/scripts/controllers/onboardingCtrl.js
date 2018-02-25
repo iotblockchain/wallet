@@ -16,14 +16,14 @@ var onboardingCtrl = function($scope, globalService, $translate, $sce) {
     // if they've seen a few slides...
     if ( $scope.onboardStatus > 0  &&  $scope.onboardStatus < 10 ) {
       $scope.showOnboardSlide = $scope.onboardStatus // set the slide to the last slide they viewed
-      $scope.onboardMsg = true                    // show a msg explaining they need to finish it
-      $scope.onboardModal.open()                     // show the modal
+      // $scope.onboardMsg = true                    // show a msg explaining they need to finish it
+      // $scope.onboardModal.open()                     // show the modal
       //console.log( $scope.onboardStatus )
     }
 
   // otherwise, show the modal (starts at slide 1 by default, above)
   } else {
-    $scope.onboardModal.open()
+    //$scope.onboardModal.open()
   }
 
   // whenever a user clicks a button on the modal...

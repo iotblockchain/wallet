@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>MyEtherWallet.com</title>
+<title>Iot Data Blockchain Wallet</title>
 <meta property="og:title" content="MyEtherWallet.com: Your Key to Ethereum">
 <meta property="og:site_name" content="MyEtherWallet.com: Your Key to Ethereum">
 <meta name="twitter:title" content="MyEtherWallet.com: Your Key to Ethereum">
@@ -95,18 +95,7 @@
 
 <section class="bg-gradient header-branding">
   <section class="container">
-    @@if (site === 'mew' ) {
-      <a class="brand" href="/" aria-label="Go to homepage">
-        <img src="images/logo-myetherwallet.svg"   height="64px" width="245px" alt="MyEtherWallet" />
-        <p class="small visible-xs">3.11.3.2</p>
-      </a>
-    }
-    @@if (site === 'cx'  ) {
-      <a class="brand" href="/cx-wallet.html" aria-label="Go to homepage">
-        <img src="images/logo-myetherwalletcx.svg" height="64px" width="245px" alt="MyEtherWallet" />
-        <p class="small visible-xs">3.11.3.2</p>
-      </a>
-    }
+    <a class="brand" href="/" aria-label="Go to homepage">IoT Data Blockchain Wallet</a>
     <div class="tagline">
 
     <span class="hidden-xs">3.11.3.2</span>
@@ -199,12 +188,6 @@
           <a ng-class="{true:'active'}[curNode == key]" ng-click="changeNode(key)">
             {{value.name}}
             <small> ({{value.service}}) </small>
-            <img ng-show="value.service=='Custom'" src="images/icon-remove.svg" class="node-remove" title="Remove Custom Node" ng-click="removeNodeFromLocal(value.name)"/>
-          </a>
-        </li>
-        <li>
-          <a ng-click="customNodeModal.open(); dropdownNode = !dropdownNode;" translate="X_Network_Custom">
-            Add Custom Network / Node
           </a>
         </li>
       </ul>
