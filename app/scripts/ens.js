@@ -239,7 +239,7 @@ ens.prototype.getAllowedTime = function(name, callback) {
 };
 ens.prototype.getTransferData = function(name, owner) {
     var _this = this;
-//    name = namehash(ens.normalise(name));
+    //    name = namehash(ens.normalise(name));
     name = _this.getSHA3(ens.normalise(name));
     var funcABI = _this.auctionABI.transfer;
     return _this.getDataString(funcABI, [name, owner]);
