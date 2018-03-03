@@ -10,6 +10,7 @@
     <!-- View Balance Only -->
     <label aria-flowto="aria1"
            class="radio"
+           style="display: none;"
            ng-show="globalService.currentTab==globalService.tabs.sendTransaction.id || globalService.currentTab==globalService.tabs.viewWalletInfo.id">
       <input aria-flowto="aria1"
              aria-label="address"
@@ -21,6 +22,7 @@
 
     <!-- MetaMask -->
     <label aria-flowto="aria2"
+           style="display: none;"
            class="radio">
       <input aria-flowto="aria2"
              type="radio"
@@ -34,6 +36,7 @@
 
     <!-- Ledger -->
     <label aria-flowto="aria3"
+           style="display: none;"
            class="radio"
            ng-show="ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'||ajaxReq.type=='UBQ'||ajaxReq.type=='POA'||ajaxReq.type=='TOMO'">
       <input aria-flowto="aria3"
@@ -46,6 +49,7 @@
 
     <!-- TREZOR -->
     <label class="radio"
+           style="display: none;"
            aria-flowto="aria4"
            ng-show="ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'||ajaxReq.type=='UBQ'||ajaxReq.type=='RSK'||ajaxReq.type=='POA'||ajaxReq.type=='TOMO'||ajaxReq.type=='ELLA'">
       <input aria-flowto="aria4"
@@ -58,6 +62,7 @@
 
     <!-- Digital Bitbox -->
     <label aria-flowto="aria5"
+           style="display: none;"
            class="radio"
            ng-show="ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'">
       <input aria-flowto="aria5"
@@ -87,6 +92,7 @@
 
     <!-- Mnemonic Phrase -->
     <label aria-flowto="aria7"
+           style="display: none;"
            class="radio">
       <input aria-flowto="aria7"
              aria-label="mnemonic phrase"
@@ -136,17 +142,6 @@
       </span>
     </label>
 
-    <label class="radio">
-      &nbsp;
-      <span translate="x_ParityPhrase">
-        Parity Phrase
-      </span>
-      <a href="https://myetherwallet.github.io/knowledge-base/private-keys-passwords/parity-phrases-are-no-longer-supported.html"
-         target="_blank"
-         rel="noopener noreferrer">
-           <img src="images/icon-help-2.svg" width="16px" height="16px" style="margin: 0 5px 5px">
-      </a>
-    </label>
   </section>
   <!-- / Column 1 - Select Type of Key -->
 
@@ -432,44 +427,6 @@
     <!-- Keystore -->
     <div ng-if="walletType=='fileupload'">
       <h4 translate="ADD_Radio_2_alt">Select your wallet file</h4>
-      <h5>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="#d9534f" d="M256 0C114.844 0 0 114.844 0 256s114.844 256 256 256 256-114.844 256-256S397.156 0 256 0zm102.625 313.375c12.5 12.492 12.5 32.758 0 45.25C352.383 364.875 344.188 368 336 368s-16.383-3.125-22.625-9.375L256 301.25l-57.375 57.375C192.383 364.875 184.188 368 176 368s-16.383-3.125-22.625-9.375c-12.5-12.492-12.5-32.758 0-45.25L210.75 256l-57.375-57.375c-12.5-12.492-12.5-32.758 0-45.25 12.484-12.5 32.766-12.5 45.25 0L256 210.75l57.375-57.375c12.484-12.5 32.766-12.5 45.25 0 12.5 12.492 12.5 32.758 0 45.25L301.25 256l57.375 57.375z"/></svg>
-        This is <u>not</u> a recommended way to access your wallet.
-      </h5>
-      <div class="form-group">
-        Entering your private key on a website dangerous. If our website is compromised or you accidentally visit a different website, your funds will be stolen. Please consider:
-      </div>
-      <ul>
-        <li>
-          <a href="https://myetherwallet.github.io/knowledge-base/migration/moving-from-private-key-to-metamask.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              MetaMask
-          </a>
-          or
-          <a href="https://myetherwallet.github.io/knowledge-base/hardware-wallets/hardware-wallet-recommendations.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              A Hardware Wallet
-          </a>
-          or
-          <a href="https://myetherwallet.github.io/knowledge-base/offline/running-myetherwallet-locally.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              Running MEW Offline &amp; Locally
-          </a>
-        </li>
-        <li>
-          <a href="https://myetherwallet.github.io/knowledge-base/security/securing-your-ethereum.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              Learning How to Protect Yourself and Your Funds
-          </a>
-        </li>
-      </ul>
-      <div class="form-group">
-        If you must, please <u>double-check the URL &amp; SSL cert</u>. It should say <code>https://www.myetherwallet.com</code> &amp; <code>MYETHERWALLET LLC</code> in your URL bar.
-      </div>
       <br />
       <div class="form-group">
         <input style="display:none;" type="file" on-read-file="showContent($fileContent)" id="fselector" />
@@ -589,45 +546,6 @@
       <h4 translate="ADD_Radio_3">
         Paste your private key:
       </h4>
-      <h5>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="#d9534f" d="M256 0C114.844 0 0 114.844 0 256s114.844 256 256 256 256-114.844 256-256S397.156 0 256 0zm102.625 313.375c12.5 12.492 12.5 32.758 0 45.25C352.383 364.875 344.188 368 336 368s-16.383-3.125-22.625-9.375L256 301.25l-57.375 57.375C192.383 364.875 184.188 368 176 368s-16.383-3.125-22.625-9.375c-12.5-12.492-12.5-32.758 0-45.25L210.75 256l-57.375-57.375c-12.5-12.492-12.5-32.758 0-45.25 12.484-12.5 32.766-12.5 45.25 0L256 210.75l57.375-57.375c12.484-12.5 32.766-12.5 45.25 0 12.5 12.492 12.5 32.758 0 45.25L301.25 256l57.375 57.375z"/></svg>
-        This is <u>not</u> a recommended way to access your wallet.
-      </h5>
-      <div class="form-group">
-        Entering your private key on a website dangerous. If our website is compromised or you accidentally visit a different website, your funds will be stolen. Please consider:
-      </div>
-      <ul>
-        <li>
-          <a href="https://myetherwallet.github.io/knowledge-base/migration/moving-from-private-key-to-metamask.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              MetaMask
-          </a>
-          or
-          <a href="https://myetherwallet.github.io/knowledge-base/hardware-wallets/hardware-wallet-recommendations.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              A Hardware Wallet
-          </a>
-          or
-          <a href="https://myetherwallet.github.io/knowledge-base/offline/running-myetherwallet-locally.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              Running MEW Offline &amp; Locally
-          </a>
-        </li>
-        <li>
-          <a href="https://myetherwallet.github.io/knowledge-base/security/securing-your-ethereum.html"
-             target="_blank"
-             rel="noopener noreferrer">
-              Learning How to Protect Yourself and Your Funds
-          </a>
-        </li>
-      </ul>
-      <div class="form-group">
-        If you must, please <u>double-check the URL &amp; SSL cert</u>. It should say <code>https://www.myetherwallet.com</code> &amp; <code>MYETHERWALLET LLC</code> in your URL bar.
-      </div>
-      <br />
       <div class="form-group">
         <textarea id="aria6"
                   class="form-control"
