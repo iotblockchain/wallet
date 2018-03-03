@@ -277,7 +277,7 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     }
     $scope.setLanguageFromStorage = function() {
         var lang = globalFuncs.localStorage.getItem('language', null);
-        if (lang == null) lang = "{\"key\":\"zhcn\",\"value\":\"简体中文\"}";
+        if (lang == null) lang = "{\"key\":\"en\",\"value\":\"English\"}";
         lang = JSON.parse(lang);
         var key = globalFuncs.stripTags(lang.key);
         var value = globalFuncs.stripTags(lang.value);

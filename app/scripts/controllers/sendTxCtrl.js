@@ -245,7 +245,7 @@ var sendTxCtrl = function($scope, $sce, walletService, $rootScope) {
             if (!resp.isError) {
                 var txHashLink = $scope.ajaxReq.blockExplorerTX.replace("[[txHash]]", resp.data);
                 var verifyTxBtn = $scope.ajaxReq.type != nodes.nodeTypes.Custom ? '<a class="btn btn-xs btn-info" href="' + txHashLink + '" class="strong" target="_blank" rel="noopener noreferrer">查看交易状态</a>' : '';
-                var completeMsg = '<p>转账发送成功，请检查交易状态。</p><p><strong>' + resp.data + '</strong></p><p>' + verifyTxBtn + '</p>';
+                var completeMsg = '<p>' + globalFuncs.successMsgs[2] + '<strong>' + resp.data + '</strong></p><p>' + verifyTxBtn + '</p>';
                 $scope.notifier.success(completeMsg, 0);
                 $scope.wallet.setBalance(applyScope);
                 if ($scope.tx.sendMode == 'token') $scope.wallet.tokenObjs[$scope.tokenTx.id].setBalance();
