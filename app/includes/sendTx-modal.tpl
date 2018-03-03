@@ -76,7 +76,7 @@
             </tr>
             <tr>
               <td class="small text-right">Amount to Send:</td>
-              <td class="small text-left mono">{{parsedSignedTx.value}} ETH</td>
+              <td class="small text-left mono">{{parsedSignedTx.value}} LDBC</td>
             </tr>
             <tr>
               <td class="small text-right">Account Balance:</td>
@@ -96,12 +96,12 @@
             </tr>
             <tr>
               <td class="small text-right">Gas Price:</td>
-              <td class="small text-left mono">{{parsedSignedTx.gasPrice.gwei}} GWEI <small>({{parsedSignedTx.gasPrice.eth}} ETH)</small>
+              <td class="small text-left mono">{{parsedSignedTx.gasPrice.gwei}} GWEI <small>({{parsedSignedTx.gasPrice.eth}} LDBC)</small>
               </td>
             </tr>
             <tr>
               <td class="small text-right">Max TX Fee:</td>
-              <td class="small text-left mono"> {{parsedSignedTx.txFee.eth}} ETH <small>({{parsedSignedTx.txFee.gwei}} GWEI)</small></td>
+              <td class="small text-left mono"> {{parsedSignedTx.txFee.eth}} LDBC<small>({{parsedSignedTx.txFee.gwei}} GWEI)</small></td>
             </tr>
             <tr>
               <td class="small text-right">Nonce:</td>
@@ -136,14 +136,6 @@
           Yes, I am sure! Make transaction.
         </button>
       </div>
-
-      <p class="small text-center" style="padding: 0px 5px;">
-        <a href="https://myetherwallet.github.io/knowledge-base/transactions/transactions-not-showing-or-pending.html" target="_blank" ref="noopener noreferrer">
-          The network is a bit overloaded. If you're having issues with TXs, please read me.
-        </a>
-      </p>
-
-
 
     </section>
   </section>
