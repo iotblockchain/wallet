@@ -7,7 +7,6 @@
         <h1 translate="NAV_CheckTxStatus">
           Check TX Status
         </h1>
-        <p translate="tx_Summary"></p>
       </section>
 
       <section class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
