@@ -244,8 +244,8 @@ var sendTxCtrl = function($scope, $sce, walletService, $rootScope) {
         uiFuncs.sendTx($scope.signedTx, function(resp) {
             if (!resp.isError) {
                 var txHashLink = $scope.ajaxReq.blockExplorerTX.replace("[[txHash]]", resp.data);
-                var verifyTxBtn = $scope.ajaxReq.type != nodes.nodeTypes.Custom ? '<a class="btn btn-xs btn-info" href="' + txHashLink + '" class="strong" target="_blank" rel="noopener noreferrer">查看交易状态</a>' : '';
-                var completeMsg = '<p>' + globalFuncs.successMsgs[2] + '<strong>' + resp.data + '</strong></p><p>' + verifyTxBtn + '</p>';
+                var verifyTxBtn = '<a href="' + txHashLink + '" class="strong" target="_blank" rel="noopener noreferrer">' + resp.data + '</a>';
+                var completeMsg = '<p>' + globalFuncs.successMsgs[2] + verifyTxBtn + '</p>';
                 $scope.notifier.success(completeMsg, 0);
                 $scope.wallet.setBalance(applyScope);
                 if ($scope.tx.sendMode == 'token') $scope.wallet.tokenObjs[$scope.tokenTx.id].setBalance();

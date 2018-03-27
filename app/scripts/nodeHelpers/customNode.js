@@ -31,7 +31,7 @@ customNode.prototype.getChainId = function(callback) {
 customNode.prototype.getBalance = function(addr, callback) {
     this.post({
         method: 'eth_getBalance',
-        params: [addr, 'pending']
+        params: [addr, 'latest']
     }, function(data) {
         if (data.error) callback({ error: true, msg: data.error.message, data: '' });
         else callback({ error: false, msg: '', data: { address: addr, balance: new BigNumber(data.result).toString() } });
