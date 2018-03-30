@@ -114,10 +114,9 @@
           <tr>
             <td>
               <a class="account-help-icon"
-                 href="https://myetherwallet.github.io/knowledge-base/transactions/what-is-nonce.html"
+                 href=""
                  target="_blank"
                  rel="noopener noreferrer">
-                   <img src="images/icon-help.svg" class="help-icon" />
                   <p class="account-help-text" translate="NONCE_Desc"></p>
               </a>
               <span translate="OFFLINE_Step2_Label_5">
@@ -131,10 +130,9 @@
           <tr>
             <td>
               <a class="account-help-icon"
-                 href="https://myetherwallet.github.io/knowledge-base/gas/what-is-gas-ethereum.html"
+                 href=""
                  target="_blank"
                  rel="noopener noreferrer">
-                    <img src="images/icon-help.svg" class="help-icon" />
                     <p class="account-help-text" translate="GAS_LIMIT_Desc"></p>
               </a>
               <span translate="OFFLINE_Step2_Label_4">
@@ -148,10 +146,9 @@
           <tr>
             <td>
               <a class="account-help-icon"
-                 href="https://myetherwallet.github.io/knowledge-base/gas/what-is-gas-ethereum.html"
+                 href=""
                  target="_blank"
                  rel="noopener noreferrer">
-                   <img src="images/icon-help.svg" class="help-icon" />
                    <p class="account-help-text" translate="GAS_PRICE_Desc"></p>
               </a>
               <span translate="OFFLINE_Step2_Label_3">
